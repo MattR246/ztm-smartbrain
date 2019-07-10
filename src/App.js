@@ -166,7 +166,7 @@ class App extends Component {
 }
 
   displayFaceBox = (box) => {
-    this.setState({box: box})
+    this.setState({box: box});
   }
 
   onInputChange = (event) => {
@@ -175,7 +175,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://localhost:3000/imageurl', {
+      fetch('http://localhost:3000/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -185,7 +185,7 @@ class App extends Component {
     .then(response => response.json())
     .then(response => {
       if (response) {
-        fetch('https://localhost:3000/image', {
+        fetch('http://localhost:3000/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
