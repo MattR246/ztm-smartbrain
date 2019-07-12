@@ -1,4 +1,5 @@
 import React from 'react';
+import Tilt from 'react-tilt';
 
 class Register extends React.Component {
 	constructor(props) {
