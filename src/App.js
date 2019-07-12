@@ -4,7 +4,6 @@ import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
 import Navigation from './Components/Navigation/Navigation';
 import Signin from './Components/Signin/Signin';
 import Register from './Components/Register/Register';
-import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import Rank from './Components/Rank/Rank';
 import './App.css';
@@ -200,7 +199,7 @@ class App extends Component {
       }
       this.displayFaceBox(this.calculateFaceLocation(response))
     })
-    .catch(err => console.log("pofs", err));
+    .catch(err => console.log(err));
   }
 
   onRouteChange = (route) => {
